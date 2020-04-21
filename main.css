@@ -17,10 +17,11 @@ section {
   border: 1px solid hotpink;
   margin: 0 auto;
   max-width: 40rem;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 main {
+  height: 100%;
   overflow: scroll;
 }
 
