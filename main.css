@@ -36,6 +36,10 @@ main {
   text-decoration: none;
 }
 
+p + p {
+  margin-top: 2rem;
+}
+
 .quote::before {
   content: "“";
 }
