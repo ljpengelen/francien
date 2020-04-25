@@ -23,6 +23,7 @@ section {
 main {
   height: 100%;
   overflow: scroll;
+  scroll-behavior: smooth;
 }
 
 .menu {
