@@ -22,13 +22,10 @@ function decode(value) {
   return jj;
 }
 
-function email(value) {
-  var emailAddress = decode(value);
-  document.write(
-    '<a class="middle" href="mailto:' +
-      emailAddress +
-      '">' +
-      emailAddress +
-      "</a>"
-  );
-}
+var mailElements = document.querySelectorAll(".email");
+
+mailElements.forEach(function (element) {
+  var encodedAddress = element.getAttribute("data-address");
+  var address = decode(encodedAddress);
+  element.innerHTML = '<a href="mailto:' + address + '">' + address + "</a>";
+});
