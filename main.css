@@ -13,13 +13,6 @@ html {
   height: 100%;
 }
 
-section {
-  border: 1px solid hotpink;
-  margin: 0 auto;
-  max-width: 40rem;
-  min-height: 100%;
-}
-
 main {
   height: 100%;
   overflow: scroll;
@@ -51,4 +44,11 @@ p + p {
 
 .quote::after {
   content: "”";
+}
+
+section {
+  border: 1px solid hotpink;
+  margin: 0 auto;
+  max-width: 40rem;
+  min-height: 100%;
 }
