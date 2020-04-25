@@ -1,12 +1,9 @@
-function isInViewport(elem) {
-  var bounding = elem.getBoundingClientRect();
+function overlap(first, second) {
+  var firstRect = first.getBoundingClientRect();
+  var secondRect = second.getBoundingClientRect();
+
   return (
-    bounding.top >= 0 &&
-    bounding.left >= 0 &&
-    bounding.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
-    bounding.right <=
-      (window.innerWidth || document.documentElement.clientWidth)
+    firstRect.top <= secondRect.bottom && firstRect.bottom >= secondRect.top
   );
 }
 
@@ -17,9 +14,10 @@ main.addEventListener(
   "scroll",
   function (event) {
     elements.forEach(function (element) {
-      if (isInViewport(element)) {
-        console.log("in viewport", element);
+      if (overlap(main, element)) {
         element.classList.add("visible");
+      } else {
+        element.classList.remove("visible");
       }
     });
   },

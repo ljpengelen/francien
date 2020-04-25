@@ -51,4 +51,12 @@ section {
   margin: 0 auto;
   max-width: 40rem;
   min-height: 100%;
+  opacity: 0.2;
+  transform: translateY(3rem);
+  transition: opacity 2s, transform 2s;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
