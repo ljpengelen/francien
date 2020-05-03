@@ -10,16 +10,23 @@ function overlap(first, second) {
 var elements = document.querySelectorAll("section");
 var main = document.querySelector("main");
 
-main.addEventListener(
-  "scroll",
-  function (event) {
-    elements.forEach(function (element) {
-      if (overlap(main, element)) {
-        element.classList.add("visible");
-      } else {
-        element.classList.remove("visible");
-      }
-    });
-  },
-  false
-);
+function show() {
+  elements.forEach(function (element) {
+    if (overlap(main, element)) {
+      element.classList.remove("invisible");
+    }
+  });
+}
+
+main.addEventListener("scroll", show, false);
+
+function hide() {
+  elements.forEach(function (element, index) {
+    if (index == 0) {
+      return;
+    }
+    element.classList.add("invisible");
+  });
+}
+
+hide();

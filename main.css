@@ -51,12 +51,19 @@ section {
   margin: 0 auto;
   max-width: 40rem;
   min-height: 100%;
-  opacity: 0.2;
-  transform: translateY(3rem);
+  opacity: 1;
+  transform: translateX(0);
   transition: opacity 2s, transform 2s;
 }
 
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
+section.invisible {
+  opacity: 0.2;
+}
+
+section.invisible:nth-child(odd) {
+  transform: translateX(3rem);
+}
+
+section.invisible:nth-child(even) {
+  transform: translateX(-3rem);
 }
