@@ -7,7 +7,7 @@ function overlap(first, second) {
   );
 }
 
-var elements = document.querySelectorAll("section");
+var elements = document.querySelectorAll(".animate");
 var main = document.querySelector("main");
 
 function show() {
@@ -22,8 +22,10 @@ main.addEventListener("scroll", show, false);
 
 function hide() {
   elements.forEach(function (element, index) {
-    if (index == 0) {
-      return;
+    if (index % 2 == 0) {
+      element.classList.add("animate-left");
+    } else {
+      element.classList.add("animate-right");
     }
     element.classList.add("invisible");
   });

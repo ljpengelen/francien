@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700");
+@import url("https://fonts.googleapis.com/css2?family=Cardo:ital@1");
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   display: flex;
@@ -9,24 +14,136 @@ body {
   line-height: 1.5;
 }
 
+h1,
+h2,
+h3 {
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
 html {
   height: 100%;
 }
 
 main {
   height: 100%;
-  overflow: scroll;
+  overflow-y: auto;
   scroll-behavior: smooth;
 }
 
+p + p,
+p + h3 {
+  margin-top: 2rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2rem auto;
+  max-width: 40rem;
+  padding: 0 2rem;
+}
+
+table {
+  margin: 2rem 0;
+}
+
+td {
+  padding-bottom: 1rem;
+}
+
+#tarifs td:first-child {
+  width: 80%;
+}
+
+td + td {
+  padding-left: 1rem;
+}
+
+#introduction {
+  background-image: url("https://cdn.dxomark.com/wp-content/uploads/medias/post-34763/11_SamsungGalaxyNote10Plus5G-4_ref.jpg");
+  background-position: right top;
+  background-size: cover;
+  max-width: none;
+}
+
+#introduction h1 {
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000,
+    1px 1px 1px #000;
+}
+
+#introduction h2 {
+  color: #fff;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: bold;
+  text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000,
+    1px 1px 1px #000;
+}
+
+#introduction p {
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+}
+
+.animate {
+  opacity: 1;
+  transition: opacity 3s, transform 3s;
+}
+
+.animate.invisible {
+  opacity: 0.2;
+}
+
+.animate-right.invisible {
+  transform: translateX(4rem);
+}
+
+.animate-left.invisible {
+  transform: translateX(-4rem);
+}
+
+.big-image {
+  background-position: center;
+  background-size: cover;
+  height: 20rem;
+}
+
+.big-image.dunes {
+  background-image: url("https://www.wandel.nl/upload_mm/f/4/b/0c70d746-d516-4644-ace8-3ec7b765da8b_image8785065499767978303_850x566.jpg");
+}
+
+.big-image img {
+  width: 100%;
+}
+
+.full-height {
+  min-height: 100%;
+}
+
 .menu {
-  /* height: 3rem; */
+  margin: 1rem auto;
 }
 
 .menu a {
   color: #000;
   font-weight: bold;
   text-decoration: none;
+  padding: 0.5rem;
   transition: color 0.2s;
 }
 
@@ -34,8 +151,14 @@ main {
   color: #777;
 }
 
-p + p {
-  margin-top: 2rem;
+.quote {
+  display: block;
+  font-family: "Cardo", serif;
+  font-size: 1.125rem;
+  font-style: italic;
+  margin: 3rem auto;
+  max-width: 40rem;
+  padding: 0 2rem;
 }
 
 .quote::before {
@@ -44,26 +167,4 @@ p + p {
 
 .quote::after {
   content: "”";
-}
-
-section {
-  border: 1px solid hotpink;
-  margin: 0 auto;
-  max-width: 40rem;
-  min-height: 100%;
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity 2s, transform 2s;
-}
-
-section.invisible {
-  opacity: 0.2;
-}
-
-section.invisible:nth-child(odd) {
-  transform: translateX(3rem);
-}
-
-section.invisible:nth-child(even) {
-  transform: translateX(-3rem);
 }
