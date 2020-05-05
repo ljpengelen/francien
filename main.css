@@ -68,7 +68,7 @@ td + td {
 }
 
 #contact {
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 #introduction {
