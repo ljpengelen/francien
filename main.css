@@ -152,6 +152,10 @@ td + td {
   color: #777;
 }
 
+.no-wrap {
+  white-space: nowrap;
+}
+
 .quote {
   display: block;
   font-family: "Cardo", serif;
