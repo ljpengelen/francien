@@ -72,28 +72,31 @@ td + td {
 }
 
 #introduction {
+  align-items: flex-start;
   background-image: url("https://cdn.dxomark.com/wp-content/uploads/medias/post-34763/11_SamsungGalaxyNote10Plus5G-4_ref.jpg");
   background-position: right center;
   background-size: cover;
+  display: flex;
   margin-top: 0;
   max-width: none;
 }
 
-#introduction h1 {
+#introduction h1,
+#introduction h2 {
   color: #fff;
-  font-size: 3.5rem;
   font-weight: bold;
+  margin: 0;
   text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000,
     1px 1px 1px #000;
 }
 
+#introduction h1 {
+  font-size: 3.5rem;
+}
+
 #introduction h2 {
-  color: #fff;
   font-size: 2rem;
   font-style: italic;
-  font-weight: bold;
-  text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000,
-    1px 1px 1px #000;
 }
 
 #introduction p {
@@ -184,4 +187,10 @@ td + td {
 
 .quote::after {
   content: "”";
+}
+
+.scrim {
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem 1rem rgba(0, 0, 0, 0.25);
 }
