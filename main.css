@@ -162,6 +162,12 @@ td + td {
   white-space: nowrap;
 }
 
+.portrait {
+  float: right;
+  margin: 0 0 1rem 1rem;
+  max-width: 18rem;
+}
+
 .quote {
   display: block;
   font-family: "Cardo", serif;
