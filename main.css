@@ -138,6 +138,7 @@ td + td {
 
 .menu {
   margin: 1rem auto;
+  padding: 0 1rem;
 }
 
 .menu a {
