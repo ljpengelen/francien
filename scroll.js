@@ -14,6 +14,8 @@ function show() {
   elements.forEach(function (element) {
     if (overlap(main, element)) {
       element.classList.remove("invisible");
+    } else {
+      element.classList.add("invisible");
     }
   });
 }
