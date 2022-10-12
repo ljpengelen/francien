@@ -53,6 +53,7 @@ section {
   margin: 0 auto;
   max-width: 40rem;
   min-height: 100%;
+  padding: 0 2rem;
 }
 
 section > div:only-child {
@@ -179,7 +180,6 @@ td + td {
   font-style: italic;
   margin: 3rem auto;
   max-width: 40rem;
-  padding: 0 2rem;
 }
 
 .quote::before {
